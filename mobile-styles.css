@@ -1,0 +1,398 @@
+/* Мобільні стилі для косметологічної клініки */
+
+/* Загальні мобільні стилі */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* Хедер та навігація */
+  header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-container {
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    justify-content: space-around;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 5px 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+  }
+
+  /* Герой-секція */
+  .hero {
+    height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Секція "Наші лікарі" */
+  .about-section {
+    padding: 40px 15px;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .doctor {
+    flex-direction: column;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .doctor-img {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .doctor-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .doctor-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .doctor-info p {
+    font-size: 0.9rem;
+  }
+
+  /* Секція "Відгуки" */
+  .reviews-section {
+    padding: 40px 15px;
+  }
+
+  .reviews-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .reviews-container {
+    grid-template-columns: 1fr;
+  }
+
+  .review {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  /* Секція "Послуги" */
+  .services-section {
+    padding: 40px 15px;
+  }
+
+  .services-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .service {
+    flex-direction: column;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .service-img {
+    height: 200px;
+    max-width: 100%;
+  }
+
+  .service-info {
+    padding: 15px;
+  }
+
+  .service-info h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Футер */
+  footer {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  /* Мобільне меню-гамбургер */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #d73327;
+  }
+
+  /* Стилі для мобільного меню на основі макету */
+  nav.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.mobile-menu.active {
+    right: 0;
+  }
+
+  nav.mobile-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav.mobile-menu li {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #d73327;
+    cursor: pointer;
+  }
+
+  /* Додаткові стилі для бічної панелі на мобільних пристроях */
+  .sidebar {
+    background-color: #f2f2f2;
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #f2f2f2;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .sidebar-nav a {
+    padding: 8px 12px;
+    color: #333;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-nav a.active {
+    color: #d73327;
+    border-bottom: 2px solid #d73327;
+  }
+  .reviews-section {
+    background-image: url("src/reviews-bg-medium.jpg");
+  }
+}
+/* Кнопка бургер-меню */
+.burger-menu {
+  display: none; /* Приховуємо на десктопі */
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 101;
+}
+
+.burger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #d73327;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Навігаційне меню для мобільних пристроїв */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.mobile-nav a {
+  color: #d73327;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+/* Кнопка закриття */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #d73327;
+  cursor: pointer;
+  z-index: 102;
+}
+
+/* Затемнення фону при відкритому меню */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Анімація для кнопки бургера при активації */
+.burger-menu.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  header nav {
+    display: none; /* Приховуємо основну навігацію на мобільних */
+  }
+
+  .header-container {
+    position: relative;
+    padding: 15px 0;
+  }
+
+  .logo {
+    z-index: 10;
+  }
+  .reviews-section {
+    background-image: url("src/reviews-bg-large.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .contact-form {
+    padding: 0 15px;
+  }
+
+  .contact-form fieldset {
+    padding: 15px;
+  }
+}
+/* Застосування overlay для кращої видимості тексту на фоні зображення */
+.reviews-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Темний напівпрозорий overlay */
+  z-index: 1;
+}
+
+/* Забезпечення видимості контенту поверх overlay */
+.reviews-section .reviews-container,
+.reviews-section h2 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Встановлення position: relative для секцій, щоб коректно працював overlay */
+.reviews-section {
+  position: relative;
+}

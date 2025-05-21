@@ -1,0 +1,498 @@
+/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Хедер */
+header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: #d73327;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Герой-секція */
+.hero {
+  height: 100vh;
+  background-image: url("src/mainphoto.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(119, 101, 99, 0.7);
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.btn-primary {
+  background-color: #fff;
+  color: #d73327;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Секція "Про нас" */
+.about-section {
+  padding: 60px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #d73327;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.doctor {
+  display: flex;
+  margin-bottom: 50px;
+  gap: 30px;
+}
+
+.doctor-img {
+  flex: 0 0 120px;
+}
+
+.doctor-img img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.doctor-info {
+  flex: 1;
+}
+
+.doctor-info h3 {
+  color: #d73327;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.doctor-title {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* Секція "Відгуки" */
+.reviews-section {
+  background-color: #f9f9f9;
+  padding: 60px 5%;
+}
+
+.reviews-section h2 {
+  text-align: center;
+  color: #d73327;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.reviews-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.review {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+}
+
+.review-avatar {
+  flex: 0 0 40px;
+  margin-right: 15px;
+}
+
+.review-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-content {
+  flex: 1;
+}
+
+.review-content h4 {
+  color: #d73327;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Секція "Послуги" */
+.services-section {
+  padding: 60px 5%;
+  background-color: #d73327;
+  color: #fff;
+}
+
+.services-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.service {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.service-img {
+  flex: 0 0 150px;
+}
+
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-info {
+  flex: 1;
+  padding: 15px;
+}
+
+.service-info h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* Футер */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 5%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+  color: #d73327;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.contact-info a {
+  color: #d73327;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #d73327;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .doctor {
+    flex-direction: column;
+  }
+
+  .doctor-img {
+    margin-bottom: 15px;
+    max-width: 120px;
+  }
+
+  .service {
+    flex-direction: column;
+  }
+
+  .service-img {
+    height: 180px;
+  }
+
+  .header-container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    margin-top: 15px;
+  }
+
+  nav ul li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 769px) {
+  .reviews-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 800px;
+  }
+}
+/* Контейнер для відео */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Стилізація відео */
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+}
+
+/* Затемнення для відео */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    119,
+    101,
+    99,
+    0.7
+  ); /* Такий же колір як у оригінальному hero */
+  z-index: 1;
+}
+
+/* Забезпечення правильного розташування контенту поверх відео */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Фонове зображення для секції відгуків */
+.reviews-section {
+  background-image: url("src/reviews-bg-small.jpg");
+}
+
+/* Стилі для форми зворотного зв'язку */
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.contact-form fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-form legend {
+  padding: 0 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.required-field {
+  color: #e74c3c;
+  margin-left: 3px;
+}
