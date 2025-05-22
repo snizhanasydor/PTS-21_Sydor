@@ -372,27 +372,11 @@
   .contact-form fieldset {
     padding: 15px;
   }
-}
-/* Застосування overlay для кращої видимості тексту на фоні зображення */
-.reviews-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Темний напівпрозорий overlay */
-  z-index: 1;
-}
+  .pricing-container {
+    grid-template-columns: 1fr;
+  }
 
-/* Забезпечення видимості контенту поверх overlay */
-.reviews-section .reviews-container,
-.reviews-section h2 {
-  position: relative;
-  z-index: 2;
-}
-
-/* Встановлення position: relative для секцій, щоб коректно працював overlay */
-.reviews-section {
-  position: relative;
+  .pricing-card.featured {
+    transform: none;
+  }
 }
